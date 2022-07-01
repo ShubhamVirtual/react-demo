@@ -1,6 +1,7 @@
 import React,{ useState} from 'react';
 import validateLogin from './LoginValidation';
-import "./Login.css"
+import "../LoginRegistration.css"
+import LoginNavBar from '../LoginNavBar';
 
 export default function Login() {
     const [fields, setFields] = useState({});
@@ -35,6 +36,7 @@ export default function Login() {
     <>
         <section className="Widget_widget__16nWC">
             <div className="widget-auth widget-p-lg">
+                <LoginNavBar />
                 <div className="d-flex align-items-center justify-content-center pb-3">
                     <p className="auth-header mb-0">Login</p>
                     
