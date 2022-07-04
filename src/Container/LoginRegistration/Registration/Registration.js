@@ -46,23 +46,16 @@ return (
               </div>
               <form onSubmit={(event) => _handleSubmit(event)}>
                   <div className="mb-3 mt-3">
-                      <label htmlFor="email" className="form-label">Email:</label>
                       <input type="email" className="form-control" id="email" placeholder="Enter email" name="email" onChange={(event) => _handleChange(event)} />
                       <div className="errorMsg text-danger">{errors.email}</div>
                   </div>
 
                   <div className="mb-3 mt-3">
-                      <div className="d-flex justify-content-between">
-                          <label htmlFor="password" className="form-label">Password:</label> 
-                      </div>
                       <input type="password" className="form-control" id="password" placeholder="Enter password" name="password" onChange={(event) => _handleChange(event)} />
                       <div className="errorMsg text-danger">{errors.password}</div>
                   </div>
 
                   <div className="mb-3 mt-3">
-                      <div className="d-flex justify-content-between">
-                          <label htmlFor="password" className="form-label">Confirm Password:</label> 
-                      </div>
                       <input type="password" className="form-control" id="confirm_password" placeholder="Enter Confirm password" name="confirm_password" onChange={(event) => _handleChange(event)} />
                       <div className="errorMsg text-danger">{errors.confirm_password}</div>
                   </div>
@@ -100,7 +93,6 @@ return (
                       </a>
                       </div>
                   </div>
-                  <a href="#">I have an account? login here</a>
               </form>
           </div>
       </section>
