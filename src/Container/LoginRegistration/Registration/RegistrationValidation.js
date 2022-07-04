@@ -3,6 +3,11 @@ const validateRigistration = (fields, applyCheck = false) => {
     let formIsValid = true;
 
 
+    if (!fields["name"] || fields["name"].trim() === '') {
+        formIsValid = false;
+        errors["name"] = "*Please enter your name.";
+    }
+    
     if (!fields["email"] || fields["email"].trim() === '') {
         formIsValid = false;
         errors["email"] = "*Please enter your email.";
@@ -36,7 +41,7 @@ const validateRigistration = (fields, applyCheck = false) => {
     
     if (fields["confirm_password"] !== fields["password"]) {
         formIsValid = false;
-        errors["password"] = "*password and confirm password are not match";
+        // errors["password"] = "*password and confirm password are not match";
         errors["confirm_password"] = "*password and confirm password are not match";
     }  
 

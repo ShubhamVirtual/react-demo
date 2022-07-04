@@ -3,7 +3,7 @@ import validateLogin from './LoginValidation';
 import "../LoginRegistration.css"
 import LoginNavBar from '../LoginNavBar';
 
-export default function Login() {
+export default function Login(props) {
     const [fields, setFields] = useState({});
     const [errors, setErrors] = useState({});
     const [applyCheck] = useState(false);
@@ -36,7 +36,7 @@ export default function Login() {
     <>
         <section className="Widget_widget__16nWC">
             <div className="widget-auth widget-p-lg">
-                <LoginNavBar />
+                <LoginNavBar pageName={props.pageName} />
                 <div className="d-flex align-items-center justify-content-center pb-3">
                     <p className="auth-header mb-0">Login</p>
                     

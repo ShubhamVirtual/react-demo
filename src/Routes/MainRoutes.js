@@ -5,8 +5,8 @@ import {
     Route,
   } from "react-router-dom";
 
-const LoginRegistration = lazy(() => import('../Container/LoginRegistration/LoginRegistration'))
-const Registration = lazy(() => import('../Container/LoginRegistration/Registration/Registration'))
+const LoginRegistration = lazy(() => import('../Container/LoginRegistration/LoginRegistration'));
+// const Registration = lazy(() => import('../Container/LoginRegistration/Registration/Registration'))
 
 export default function MainRoutes() {
   return (
