@@ -46,18 +46,21 @@ export default function Login(props) {
                 </div>
                 <form onSubmit={(event) => _handleSubmit(event)}>
                     <div className="mb-3 mt-3">
-                        <label htmlFor="email" className="form-label">Email:</label>
                         <input type="email" className="form-control" id="email" placeholder="Enter email" name="email" onChange={(event) => _handleChange(event)} />
                         <div className="errorMsg text-danger">{errors.email}</div>
                     </div>
 
                     <div className="mb-3 mt-3">
-                        <div className="d-flex justify-content-between">
-                            <label htmlFor="password" className="form-label">Password:</label> 
-                            <a href="#/error">Forgot password?</a>
-                        </div>
-                        <input type="password" className="form-control" id="password" placeholder="Enter password" name="password" onChange={(event) => _handleChange(event)} />
+                        {/* <div className="d-flex justify-content-between">
+                            <label htmlFor="password" className="form-label"></label> 
+                            <a href="#/error" className='mb-2'>Forgot password?</a>
+                        </div> */}
+                        <input type="password" className="form-control mb-2" id="password" placeholder="Enter password" name="password" onChange={(event) => _handleChange(event)} />
                         <div className="errorMsg text-danger">{errors.password}</div>
+                        <div className="d-flex justify-content-between">
+                            <label htmlFor="password" className="form-label"></label> 
+                            <a href="#/error" className='mb-2'>Forgot password?</a>
+                        </div>
                     </div>
 
                     <div className="bg-widget d-flex justify-content-center"><button type="submit" className="rounded-pill my-3 btn btn-secondary-red" >Login</button></div>

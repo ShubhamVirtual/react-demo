@@ -10,12 +10,12 @@ export default function LoginRegistration(props) {
             <div className='container py-4'>
                 <div className='row'>
                     <div className='col-lg-5'>
-                        {(props.pageName === "login") ? <Login /> : ""}
-                        {(props.pageName === "registration") ? <Registration /> : ""}
+                    {(props.pageName === "login") ? <Login pageName='login' /> : ""}
+                    {(props.pageName === "registration") ? <Registration pageName='registration' /> : ""}
                         
                     </div>
-                    <div className='col-lg-7 d-flex justify-content-end '>
-                        <img src="./assets/images/login.svg" className='img-fluid pull-right' />
+                    <div className='col-lg-7'>
+                        <img src="./assets/images/login.svg" className='img-fluid pull-right pt-5' style={{width: '100vw'}}/>
                     </div>
                 </div>
             </div>
